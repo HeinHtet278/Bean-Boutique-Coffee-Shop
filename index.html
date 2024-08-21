@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bean Boutique Coffee Shop</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="js/map.js"></script>
+    <script src="js/homestyles.js"></script>
+    <script src="js/popup.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+</head>
+<body onload="openPopup()">
+
+    <!-- <div class="overlay"></div>
+    <div class="popup">
+        <span class="close-btn" onclick="closePopup()">×</span>
+        <h2>Order Now and Subscribe for More!</h2>
+        <p>Since you are the first person to buy on this page, we will give you a 10% discount</p>
+        <button onclick="orderNow()">Order Now</button>
+        <button onclick="subscribe()">Subscribe</button>
+    </div> -->
+
+    
+    <header id="home_header">
+    <nav>
+        <div id="container">
+            <h2>Bean Boutique Coffee Shop</h2>
+            <form id="searchbox">
+		  <input type="text" id="search" name="search" placeholder="Search..">
+		</form>
+
+        </div>
+
+        <div id="navigation">
+            <ul>
+                <li><a id="Home" href="index.html">Home</a></li>
+                <li><a class="hover" id="CoffeeSelection" href="CoffeeSelection.html">Coffee Selection</a></li>
+                <li><a class="hover" id="BrewingEquipment" href="BrewingEquipment.html"> Brewing Equipment</a></li>
+                <li><a class="hover" id="Events&Workshops" href="Events&Workshops.html"> Events and Workshops</a></li>
+                <li><a class="hover" id="SpeicalOffers&Suscription" href="SpeicalOffers&Suscription.html">Special Offers and Subscriptions</a></li>
+                <li><a class="hover" id="ShoppingCart" href="ShoppingCart.html"> <img src="images/cart-shopping-fast(1).png" alt="ShoppingCart"> </a></li>
+            </ul>
+        </div>
+        </nav>
+   
+        <div class="Welcome">
+            <h1>Welcome to Bean Boutique Coffee Shop</h1>
+            <p>Your perfect cup of coffee awaits. Explore our unique blends, brewing equipment, and exciting events.</p>
+        </div>
+        <div class="slideshow-container">
+            <div class="slides">
+                <img src="./images/slideImg.jpg" alt="beans">
+                <img src="images/slideImg2.jpg" alt="brewingequiment">
+                <img src="images/slideImg3.jpg" alt="peopleenjoye">               
+            </div>    
+            
+    <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+    <a class="next" onclick="changeSlide(1)">&#10095;</a>
+        </div>  
+
+        </header>
+
+        <section class="customer-favorites">
+            <h2>Customer Favorites</h2>
+            <div class="favorites-container">
+                <div class="favorite coffee">
+                    <img src="images/coffee1.jpg" alt="AmericanoCoffee">
+                    <h3>Americano coffee</h3>
+                    <p> 
+                        The Americano is a popular coffee drink made by diluting espresso with hot water. 
+                        It has a rich, bold flavor with a smooth finish, perfect for those who enjoy the taste of coffee.</p>
+                        <button onclick="window.location.href='ShoppingCart.html';">Order Now</button>
+
+                        <button onclick="window.location.href='viewdetailAmericanomachine.html';">Order Now</button>
+                </div>
+                <div class="favorite coffee">
+                    <img src="images/coffee.jpg" alt="EspressoCoffee">
+                    <h3>Espresso coffee</h3>
+                    <p>It's a process of brewing coffee and is instead made by forcing high-pressured hot water through very finely ground coffee beans</p>
+                    <button onclick="window.location.href='ShoppingCart.html';">Order Now</button>
+                </div>
+                <div class="favorite coffee">
+                    <img src="images/coffee2.jpg" alt="BlackCoffee">
+                    <h3>Black Coffee</h3>
+                    <p>Black coffee is simply coffeewith nothing added - no cream, no milk, no sweetener.</p>
+                    <button onclick="window.location.href='ShoppingCart.html';">Order Now</button>
+                </div>
+            </div>
+            <div class="favorites-container">
+            <div class="favorite equipment">
+                    <img src="images/brewingequiment1.jpg" alt="AmericanoMachine">
+                    <h3>Americano Machine</h3>
+                    <p>The Americano Coffee Machine is your perfect companion for brewing rich and flavorful Americano coffee at home. 
+                        Designed with precision and ease of use in mind, it delivers a café-quality experience in every cup.</p>
+                        <button onclick="window.location.href='ShoppingCart.html';">Order Now</button>
+                        <button onclick="window.location.href='viewdetailAmericanomachine.html';">Order Now</button>
+                </div>
+            <div class="favorites-container">
+                <div class="favorite equipment">
+                    <img src="images/brewingequiment.webp"  alt="CoffeeScale">
+                    <h3>Coffee Scale</h3>
+                    <p> 
+                        Best Manual Brewing as this hand-brewed coffee weighing scale is the first choice for baristas or coffee lovers. It is the best appliance to measure the exact coffee weight and the first choice for baristas or coffee lovers as it speeds up the entire process and entails an aromatic experience.</p>
+                        <button onclick="window.location.href='ShoppingCart.html';">Order Now</button>
+                </div>
+            </div>
+                <div class="favorite equipment">
+                    <img src="images/brewingequiment2.webp" alt="TheCoffeeGrinder">
+                    <h3>The Coffee Grinder</h3>
+                    <p>The Coffee Grinder is the essential tool for coffee enthusiasts who prefer to grind their own beans. 
+                        It offers precision grinding, ensuring you get the perfect grind size for any brewing method, from espresso to French press.</p>
+                        <button onclick="window.location.href='ShoppingCart.html';">Order Now</button>
+                </div>
+            </div>
+        </section>
+        <section id="about">
+                <h2>About Us</h2>
+                <p>At Bean Boutique, we believe in the art of coffee. We bring the best blends and equipment to coffee lovers who appreciate the finer things in life.</p>
+        </section>
+        <section class="coffeeCatalogueHeading">
+            <h2>Our Shop Location</h2>
+            <p>Find us in the heart of the city, where the aroma of freshly roasted coffee.</p>
+            <div class="shop-location-container">
+                <div class="shop-map">
+                    <div id="map"></div>
+                </div>
+            </div>
+        </section>
+        <footer id="home_footer">
+            <div class="container">
+                <div class="footer-brand">
+                    <h2>Caffeine</h2>
+                    <p>Enjoy Better And Better Quality Coffee With Caffeine.</p>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p><strong>Email:</strong> BeanBoutiqueCoffeeShop@gmail.com</p>
+                    <p><strong>Call Us:</strong> (+95) 9754400471</p>
+                    <p><strong>Text Us:</strong> (+95) 9754400471</p>
+                    <p><strong>Address:</strong> No(34) Thiri Mingalar Street(5) Y-Max Collage </p>
+                </div>
+                <div class="footer-social">
+                    <h3>Follow Us</h3>
+                    <a href="facebook.com"><img src="images/facebook.png" alt="Facebook"></a>
+                    <a href="twitter.com"><img src="images/twitter.png" alt="Twitter"></a>
+                    <a href="instagram.com"><img src="images/insta.png" alt="Instagram"></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Bean Boutique. All rights reserved.</p>
+            </div>
+            </footer>
+            
+</body>
+</html>
